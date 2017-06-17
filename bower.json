@@ -1,0 +1,14 @@
+{
+    "name": "shopping",
+    "description": "Mostru\u00e1rio de vendas para Minetest",
+    "keywords": [
+        "shopping"
+    ],
+    "homepage": "https://github.com/BrunoMine/shopping",
+    "screenshots": [
+        "https://raw.githubusercontent.com/BrunoMine/shopping/master/screenshot.png"
+    ],
+    "authors": [
+        "BrunoMine"
+    ]
+}
