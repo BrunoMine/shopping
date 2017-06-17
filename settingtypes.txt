@@ -1,0 +1,83 @@
+# Configurações aplicaveis para o menu gráfico
+
+# Essa vai ser a moeda de trocas basica (dinheiro)
+# Deve ser um itemstring
+shopping_money (Item usado como moeda) string default:gold_ingot
+
+# Esse deve ser o nome de uma textura
+shopping_money_imagem (Textura usada como moeda) string default_gold_ingot.png
+
+
+# Essa quantia vai ser cobrada do jogador para a venda
+shopping_papyrus_cost (Quantia de Papiro por Venda) int 60 1
+
+# Essa quantia vai ser dada ao jogador pela venda
+shopping_papyrus_receive (Valor Recebido pelo Papiro) int 1 1
+
+
+# Essa quantia vai ser cobrada do jogador para a venda
+shopping_tree_cost (Quantia de Madeira por Venda) int 25 1
+
+# Essa quantia vai ser dada ao jogador pela venda
+shopping_tree_receive (Valor Recebido pela Madeira) int 1 1
+
+
+# Essa quantia vai ser cobrada do jogador para a venda
+shopping_jungletree_cost (Quantia de Madeira Selvagem por Venda) int 25 1
+
+# Essa quantia vai ser dada ao jogador pela venda
+shopping_jungletree_receive (Valor Recebido pela Madeira Selvagem) int 1 1
+
+
+# Essa quantia vai ser cobrada do jogador para a venda
+shopping_pine_tree_cost (Quantia de Prineiro por Venda) int 25 1
+
+# Essa quantia vai ser dada ao jogador pela venda
+shopping_pine_tree_receive (Valor Recebido pelo Pinheiro) int 1 1
+
+
+# Essa quantia vai ser cobrada do jogador para a venda
+shopping_aspen_tree_cost (Quantia de Choupo por Venda) int 25 1
+
+# Essa quantia vai ser dada ao jogador pela venda
+shopping_aspen_tree_receive (Valor Recebido pelo Choupo) int 1 1
+
+
+# Essa quantia vai ser cobrada do jogador para a venda
+shopping_acacia_tree_cost (Quantia de Acacia por Venda) int 25 1
+
+# Essa quantia vai ser dada ao jogador pela venda
+shopping_acacia_tree_receive (Valor Recebido pela Acacia) int 1 1
+
+
+# Essa quantia vai ser cobrada do jogador para a venda
+shopping_steel_cost (Quantia de Ferro por Venda) int 4 1
+
+# Essa quantia vai ser dada ao jogador pela venda
+shopping_steel_receive (Valor Recebido pelo Ferro) int 1 1
+
+
+# Essa quantia vai ser cobrada do jogador para a venda
+shopping_mese_cost (Quantia de Mese por Venda) int 1 1
+
+# Essa quantia vai ser dada ao jogador pela venda
+shopping_mese_receive (Valor Recebido pelo Mese) int 25 1
+
+
+# Essa quantia vai ser cobrada do jogador para a venda
+shopping_cobble_cost (Quantia de Pedregulho por Venda) int 99 1
+
+# Essa quantia vai ser dada ao jogador pela venda
+shopping_cobble_receive (Valor Recebido pelo Pedregulho) int 1 1
+
+
+# Essa quantia vai ser cobrada do jogador para a venda
+shopping_desert_cobble_cost (Quantia de Pedregulho do Deserto por Venda) int 99 1
+
+# Essa quantia vai ser dada ao jogador pela venda
+shopping_desert_cobble_receive (Valor Recebido pelo Pedregulho do Deserto) int 1 1
+
+
+
+
+
