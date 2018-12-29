@@ -9,11 +9,13 @@
 	Mostruario de venda de jungletree (arvore selvagem)
   ]]
 
+-- Tradutor de strings
+local S = shopping.S
 
 -- Node
 minetest.register_node("shopping:bancada_jungletree", {
 	-- Geral
-	description = "Bancada de Venda de Arvore Selvagem",
+	description = S("Bancada de Venda de @1", minetest.registered_items["default:jungletree"].description),
 	
 	-- Arte
 	tiles = {"shopping_bancada_jungletree.png"},

@@ -9,15 +9,18 @@
 	Mostruario de venda de cobble (pedregulho)
   ]]
 
+-- Tradutor de strings
+local S = shopping.S
+
 -- Node decorativo
 minetest.register_node("shopping:bancada_cobble_decor", {
 	-- Geral
-	description = "Pedras Decorativas (Bancada de Vendas)",
+	description = "Bloco Decorativo de 'cobble' (Bancada de Vendas)",
 	
 	-- Arte
 	tiles = {"default_cobble.png"},
 	drawtype = "mesh",
-	mesh = "shopping_bancada_cobble_cubos.obj",
+	mesh = "shopping_bancada_pedra_cubos.obj",
 	collision_box = {
 		type = "fixed",
 		fixed = {
@@ -52,12 +55,12 @@ minetest.register_node("shopping:bancada_cobble_decor", {
 -- Node Principal
 minetest.register_node("shopping:bancada_cobble", {
 	-- Geral
-	description = "Bancada de Venda de Pedregulhos",
+	description = S("Bancada de Venda de @1", minetest.registered_items["default:cobble"].description),
 	
 	-- Arte
-	tiles = {"shopping_bancada_cobble.png"},
+	tiles = {"shopping_bancada_pedra.png"},
 	drawtype = "mesh",
-	mesh = "shopping_bancada_cobble.obj",
+	mesh = "shopping_bancada_pedra.obj",
 	collision_box = {
 		type = "fixed",
 		fixed = {

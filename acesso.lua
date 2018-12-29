@@ -9,9 +9,11 @@
 	Trocar itens
   ]]
 
+-- Tradutor de strings
+local S = shopping.S
+
 -- Registros de itens de bancadas acessados
 local online = {}
-
 
 -- Metodo para exibir formspec de troca
 shopping.acesso = function(player, item)
@@ -35,7 +37,7 @@ shopping.acesso = function(player, item)
 		.."image[5.5,0.25;2,2;"..shopping.money_imagem.."]"
 		.."label[7.25,0.25;"..shopping.itens[item].money.."]"
 		
-		.."button[4,3;4,1;vender;Vender ("..shopping.itens[item].qtd..")]"
+		.."button[4,3;4,1;vender;"..S("Vender (@1)", shopping.itens[item].qtd).."]"
 		
 	online[player:get_player_name()] = item
 	minetest.show_formspec(player:get_player_name(), "shopping:bancada", formspec)

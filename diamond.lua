@@ -6,21 +6,21 @@
 	Public License junto com esse software,
 	se não, veja em <http://www.gnu.org/licenses/>. 
 	
-	Mostruario de venda de tree (arvore)
+	Mostruario de venda de diamond
   ]]
 
 -- Tradutor de strings
 local S = shopping.S
 
 -- Node
-minetest.register_node("shopping:bancada_tree", {
+minetest.register_node("shopping:bancada_diamond", {
 	-- Geral
-	description = S("Bancada de Venda de @1", minetest.registered_items["default:tree"].description),
+	description = S("Bancada de Venda de @1", minetest.registered_items["default:diamond"].description),
 	
 	-- Arte
-	tiles = {"shopping_bancada_tree.png"},
+	tiles = {"shopping_bancada_diamond.png"},
 	drawtype = "mesh",
-	mesh = "shopping_bancada_tree.obj",
+	mesh = "shopping_bancada_cristal.obj",
 	collision_box = {
 		type = "fixed",
 		fixed = {
@@ -44,7 +44,7 @@ minetest.register_node("shopping:bancada_tree", {
 	-- Chamadas de eventos
 	
 	on_rightclick = function(pos, node, player, itemstack, pointed_thing)
-		shopping.acesso(player, "default:tree")
+		shopping.acesso(player, "default:diamond")
 	end,
 	
 })

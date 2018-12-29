@@ -6,19 +6,21 @@
 	Public License junto com esse software,
 	se não, veja em <http://www.gnu.org/licenses/>. 
 	
-	Mostruario de venda de mese
+	Mostruario de venda de steel
   ]]
 
+-- Tradutor de strings
+local S = shopping.S
 
 -- Node
 minetest.register_node("shopping:bancada_steel", {
 	-- Geral
-	description = "Bancada de Venda de Mese",
+	description = S("Bancada de Venda de @1", minetest.registered_items["default:steel_ingot"].description),
 	
 	-- Arte
 	tiles = {"shopping_bancada_steel.png"},
 	drawtype = "mesh",
-	mesh = "shopping_bancada_steel.obj",
+	mesh = "shopping_bancada_metal.obj",
 	collision_box = {
 		type = "fixed",
 		fixed = {

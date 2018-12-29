@@ -56,6 +56,11 @@ shopping_steel_cost (Quantia de Ferro por Venda) int 4 1
 # Essa quantia vai ser dada ao jogador pela venda
 shopping_steel_receive (Valor Recebido pelo Ferro) int 1 1
 
+# Essa quantia vai ser cobrada do jogador para a venda
+shopping_copper_cost (Quantia de Cobre por Venda) int 6 1
+
+# Essa quantia vai ser dada ao jogador pela venda
+shopping_copper_receive (Valor Recebido pelo Cobre) int 1 1
 
 # Essa quantia vai ser cobrada do jogador para a venda
 shopping_mese_cost (Quantia de Mese por Venda) int 1 1
@@ -63,6 +68,11 @@ shopping_mese_cost (Quantia de Mese por Venda) int 1 1
 # Essa quantia vai ser dada ao jogador pela venda
 shopping_mese_receive (Valor Recebido pelo Mese) int 25 1
 
+# Essa quantia vai ser cobrada do jogador para a venda
+shopping_diamond_cost (Quantia de Diamante por Venda) int 1 1
+
+# Essa quantia vai ser dada ao jogador pela venda
+shopping_diamond_receive (Valor Recebido pelo Diamante) int 8 1
 
 # Essa quantia vai ser cobrada do jogador para a venda
 shopping_cobble_cost (Quantia de Pedregulho por Venda) int 99 1
@@ -70,6 +80,11 @@ shopping_cobble_cost (Quantia de Pedregulho por Venda) int 99 1
 # Essa quantia vai ser dada ao jogador pela venda
 shopping_cobble_receive (Valor Recebido pelo Pedregulho) int 1 1
 
+# Essa quantia vai ser cobrada do jogador para a venda
+shopping_cobble_cost (Quantia de Carvão por Venda) int 2 1
+
+# Essa quantia vai ser dada ao jogador pela venda
+shopping_cobble_receive (Valor Recebido pelo Carvão) int 1 1
 
 # Essa quantia vai ser cobrada do jogador para a venda
 shopping_desert_cobble_cost (Quantia de Pedregulho do Deserto por Venda) int 99 1

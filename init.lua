@@ -21,6 +21,8 @@ local modpath = minetest.get_modpath("shopping")
 -- Variavel global
 shopping = {}
 
+dofile(modpath.."/tradutor.lua")
+
 -- Diretrizes
 
 -- Item monetário
@@ -31,70 +33,104 @@ shopping.money_imagem = (minetest.setting_get("shopping_money_imagem") or "defau
 shopping.itens = {}
 -- Papyrus
 shopping.itens["default:papyrus"] = {
-qtd = tonumber(minetest.setting_get("shopping_papyrus_cost") or 60),
-money = tonumber(minetest.setting_get("shopping_papyrus_receive") or 1),
-imagem = "default_papyrus.png"
+	qtd = tonumber(minetest.setting_get("shopping_papyrus_cost") or 60),
+	money = tonumber(minetest.setting_get("shopping_papyrus_receive") or 1),
+	imagem = "default_papyrus.png"
 }
 -- Cobble
 shopping.itens["default:cobble"] = {
-qtd = tonumber(minetest.setting_get("shopping_cobble_cost") or 99),
-money = tonumber(minetest.setting_get("shopping_cobble_receive") or 1),
-imagem = minetest.inventorycube("default_cobble.png", "default_cobble.png", "default_cobble.png")
+	qtd = tonumber(minetest.setting_get("shopping_cobble_cost") or 99),
+	money = tonumber(minetest.setting_get("shopping_cobble_receive") or 1),
+	imagem = minetest.inventorycube("default_cobble.png", "default_cobble.png", "default_cobble.png")
 }
 -- Desert Cobble
 shopping.itens["default:desert_cobble"] = {
-qtd = tonumber(minetest.setting_get("shopping_desert_cobble_cost") or 99),
-money = tonumber(minetest.setting_get("shopping_desert_cobble_receive") or 1),
-imagem = minetest.inventorycube("default_desert_cobble.png", "default_desert_cobble.png", "default_desert_cobble.png")
+	qtd = tonumber(minetest.setting_get("shopping_desert_cobble_cost") or 99),
+	money = tonumber(minetest.setting_get("shopping_desert_cobble_receive") or 1),
+	imagem = minetest.inventorycube("default_desert_cobble.png", "default_desert_cobble.png", "default_desert_cobble.png")
+}
+-- Coal
+shopping.itens["default:coalblock"] = {
+	qtd = tonumber(minetest.setting_get("shopping_coal_cost") or 2),
+	money = tonumber(minetest.setting_get("shopping_coal_receive") or 1),
+	imagem = minetest.inventorycube("default_coal_block.png", "default_coal_block.png", "default_coal_block.png")
 }
 -- Tree
 shopping.itens["default:tree"] = {
-qtd = tonumber(minetest.setting_get("shopping_tree_cost") or 25),
-money = tonumber(minetest.setting_get("shopping_tree_receive") or 1),
-imagem = minetest.inventorycube("default_tree_top.png", "default_tree.png", "default_tree.png")
+	qtd = tonumber(minetest.setting_get("shopping_tree_cost") or 25),
+	money = tonumber(minetest.setting_get("shopping_tree_receive") or 1),
+	imagem = minetest.inventorycube("default_tree_top.png", "default_tree.png", "default_tree.png")
 }
 -- Jungle Tree
 shopping.itens["default:jungletree"] = {
-qtd = tonumber(minetest.setting_get("shopping_jungletree_cost") or 25),
-money = tonumber(minetest.setting_get("shopping_jungletree_receive") or 1),
-imagem = minetest.inventorycube("default_jungletree_top.png", "default_jungletree.png", "default_jungletree.png")
+	qtd = tonumber(minetest.setting_get("shopping_jungletree_cost") or 25),
+	money = tonumber(minetest.setting_get("shopping_jungletree_receive") or 1),
+	imagem = minetest.inventorycube("default_jungletree_top.png", "default_jungletree.png", "default_jungletree.png")
 }
 -- Pine Tree
 shopping.itens["default:pine_tree"] = {
-qtd = tonumber(minetest.setting_get("shopping_pine_tree_cost") or 25),
-money = tonumber(minetest.setting_get("shopping_pine_tree_receive") or 1),
-imagem = minetest.inventorycube("default_pine_tree_top.png", "default_pine_tree.png", "default_pine_tree.png")
+	qtd = tonumber(minetest.setting_get("shopping_pine_tree_cost") or 25),
+	money = tonumber(minetest.setting_get("shopping_pine_tree_receive") or 1),
+	imagem = minetest.inventorycube("default_pine_tree_top.png", "default_pine_tree.png", "default_pine_tree.png")
 }
 -- Acacia Tree
 shopping.itens["default:acacia_tree"] = {
-qtd = tonumber(minetest.setting_get("shopping_acacia_tree_cost") or 25),
-money = tonumber(minetest.setting_get("shopping_acacia_tree_receive") or 1),
-imagem = minetest.inventorycube("default_acacia_tree_top.png", "default_acacia_tree.png", "default_acacia_tree.png")
+	qtd = tonumber(minetest.setting_get("shopping_acacia_tree_cost") or 25),
+	money = tonumber(minetest.setting_get("shopping_acacia_tree_receive") or 1),
+	imagem = minetest.inventorycube("default_acacia_tree_top.png", "default_acacia_tree.png", "default_acacia_tree.png")
 }
 -- Aspen Tree
 shopping.itens["default:aspen_tree"] = {
-qtd = tonumber(minetest.setting_get("shopping_aspen_tree_cost") or 25),
-money = tonumber(minetest.setting_get("shopping_aspen_tree_receive") or 1),
-imagem = minetest.inventorycube("default_aspen_tree_top.png", "default_aspen_tree.png", "default_aspen_tree.png")
+	qtd = tonumber(minetest.setting_get("shopping_aspen_tree_cost") or 25),
+	money = tonumber(minetest.setting_get("shopping_aspen_tree_receive") or 1),
+	imagem = minetest.inventorycube("default_aspen_tree_top.png", "default_aspen_tree.png", "default_aspen_tree.png")
 }
 -- Steel
 shopping.itens["default:steel_ingot"] = {
-qtd = tonumber(minetest.setting_get("shopping_steel_cost") or 4),
-money = tonumber(minetest.setting_get("shopping_steel_receive") or 1),
-imagem = "default_steel_ingot.png"
+	qtd = tonumber(minetest.setting_get("shopping_steel_cost") or 4),
+	money = tonumber(minetest.setting_get("shopping_steel_receive") or 1),
+	imagem = "default_steel_ingot.png"
+}
+-- Copper
+shopping.itens["default:copper_ingot"] = {
+	qtd = tonumber(minetest.setting_get("shopping_copper_cost") or 6),
+	money = tonumber(minetest.setting_get("shopping_copper_receive") or 1),
+	imagem = "default_copper_ingot.png"
+}
+-- Tin
+shopping.itens["default:tin_ingot"] = {
+	qtd = tonumber(minetest.setting_get("shopping_tin_cost") or 12),
+	money = tonumber(minetest.setting_get("shopping_tin_receive") or 1),
+	imagem = "default_tin_ingot.png"
+}
+-- Gold
+shopping.itens["default:gold_ingot"] = {
+	qtd = tonumber(minetest.setting_get("shopping_gold_cost") or 1),
+	money = tonumber(minetest.setting_get("shopping_gold_receive") or 1),
+	imagem = "default_gold_ingot.png"
 }
 -- Mese
 shopping.itens["default:mese"] = {
-qtd = tonumber(minetest.setting_get("shopping_mese_cost") or 1),
-money = tonumber(minetest.setting_get("shopping_mese_receive") or 25),
-imagem = minetest.inventorycube("default_mese_block.png", "default_mese_block.png", "default_mese_block.png")
+	qtd = tonumber(minetest.setting_get("shopping_mese_cost") or 1),
+	money = tonumber(minetest.setting_get("shopping_mese_receive") or 25),
+	imagem = minetest.inventorycube("default_mese_block.png", "default_mese_block.png", "default_mese_block.png")
 }
+-- Diamond
+shopping.itens["default:diamond"] = {
+	qtd = tonumber(minetest.setting_get("shopping_diamond_cost") or 1),
+	money = tonumber(minetest.setting_get("shopping_diamond_receive") or 8),
+	imagem = "default_diamond.png"
+}
+
 -- Carregar scripts
 notificar("Carregando scripts...")
 dofile(modpath.."/trocar.lua")
 dofile(modpath.."/acesso.lua")
+
+-- Bancadas
 dofile(modpath.."/papyrus.lua")
 dofile(modpath.."/cobble.lua")
+dofile(modpath.."/coal.lua")
 dofile(modpath.."/desert_cobble.lua")
 dofile(modpath.."/tree.lua")
 dofile(modpath.."/jungletree.lua")
@@ -102,5 +138,10 @@ dofile(modpath.."/pine_tree.lua")
 dofile(modpath.."/acacia_tree.lua")
 dofile(modpath.."/aspen_tree.lua")
 dofile(modpath.."/steel.lua")
+dofile(modpath.."/copper.lua")
+dofile(modpath.."/tin.lua")
+dofile(modpath.."/gold.lua")
 dofile(modpath.."/mese.lua")
+dofile(modpath.."/diamond.lua")
+
 notificar("OK")

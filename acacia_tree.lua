@@ -9,11 +9,13 @@
 	Mostruario de venda de acacia_tree (acacia)
   ]]
 
+-- Tradutor de strings
+local S = shopping.S
 
 -- Node
 minetest.register_node("shopping:bancada_acacia_tree", {
 	-- Geral
-	description = "Bancada de Venda de Acacia",
+	description = S("Bancada de Venda de @1", minetest.registered_items["default:acacia_tree"].description),
 	
 	-- Arte
 	tiles = {"shopping_bancada_acacia_tree.png"},

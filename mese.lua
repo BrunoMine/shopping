@@ -9,16 +9,18 @@
 	Mostruario de venda de mese
   ]]
 
+-- Tradutor de strings
+local S = shopping.S
 
 -- Node
 minetest.register_node("shopping:bancada_mese", {
 	-- Geral
-	description = "Bancada de Venda de Mese",
+	description = S("Bancada de Venda de @1", minetest.registered_items["default:mese"].description),
 	
 	-- Arte
 	tiles = {"shopping_bancada_mese.png"},
 	drawtype = "mesh",
-	mesh = "shopping_bancada_mese.obj",
+	mesh = "shopping_bancada_cristal.obj",
 	collision_box = {
 		type = "fixed",
 		fixed = {

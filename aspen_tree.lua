@@ -9,11 +9,13 @@
 	Mostruario de venda de aspen_tree (choupo)
   ]]
 
+-- Tradutor de strings
+local S = shopping.S
 
 -- Node
 minetest.register_node("shopping:bancada_aspen_tree", {
 	-- Geral
-	description = "Bancada de Venda de Choupo",
+	description = S("Bancada de Venda de @1", minetest.registered_items["default:aspen_tree"].description),
 	
 	-- Arte
 	tiles = {"shopping_bancada_aspen_tree.png"},

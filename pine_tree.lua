@@ -9,11 +9,13 @@
 	Mostruario de venda de pine_tree (pinheiro)
   ]]
 
+-- Tradutor de strings
+local S = shopping.S
 
 -- Node
 minetest.register_node("shopping:bancada_pine_tree", {
 	-- Geral
-	description = "Bancada de Venda de Pinheiro",
+	description = S("Bancada de Venda de @1", minetest.registered_items["default:pine_tree"].description),
 	
 	-- Arte
 	tiles = {"shopping_bancada_pine_tree.png"},

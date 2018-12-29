@@ -1,6 +1,6 @@
 --[[
 	Mod Shopping para Minetest
-	Copyright (C) 2016 BrunoMine (https://github.com/BrunoMine)
+	Copyright (C) 2018 BrunoMine (https://github.com/BrunoMine)
 	
 	Recebeste uma cópia da GNU Lesser General
 	Public License junto com esse software,
@@ -9,10 +9,13 @@
 	Mostruario de venda de papyrus
   ]]
 
+-- Tradutor de strings
+local S = shopping.S
+
 -- Node
 minetest.register_node("shopping:bancada_papyrus", {
 	-- Geral
-	description = "Bancada de Venda de Papiro",
+	description = S("Bancada de Venda de @1", minetest.registered_items["default:papyrus"].description),
 	
 	-- Arte
 	tiles = {"shopping_bancada_papyrus.png"},

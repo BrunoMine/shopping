@@ -6,19 +6,19 @@
 	Public License junto com esse software,
 	se não, veja em <http://www.gnu.org/licenses/>. 
 	
-	Mostruario de venda de desert_cobble (pedregulho do deserto)
+	Mostruario de venda de coal (pedregulho)
   ]]
 
 -- Tradutor de strings
 local S = shopping.S
 
 -- Node decorativo
-minetest.register_node("shopping:bancada_desert_cobble_decor", {
+minetest.register_node("shopping:bancada_coal_decor", {
 	-- Geral
-	description = "Bloco Decorativo de 'desert cobble' (Bancada de Vendas)",
+	description = "Bloco Decorativo de 'coal' (Bancada de Vendas)",
 	
 	-- Arte
-	tiles = {"default_desert_cobble.png"},
+	tiles = {"default_coal_block.png"},
 	drawtype = "mesh",
 	mesh = "shopping_bancada_pedra_cubos.obj",
 	collision_box = {
@@ -45,7 +45,7 @@ minetest.register_node("shopping:bancada_desert_cobble_decor", {
 	
 	-- Verifica se tem pedra em baixo
 	on_construct = function(pos)
-		if minetest.get_node({x=pos.x, y=pos.y-1, z=pos.z}).name ~= "shopping:bancada_desert_cobble" then
+		if minetest.get_node({x=pos.x, y=pos.y-1, z=pos.z}).name ~= "shopping:bancada_coal" then
 			minetest.remove_node(pos)
 		end 
 	end
@@ -53,9 +53,9 @@ minetest.register_node("shopping:bancada_desert_cobble_decor", {
 })
 
 -- Node Principal
-minetest.register_node("shopping:bancada_desert_cobble", {
+minetest.register_node("shopping:bancada_coal", {
 	-- Geral
-	description = S("Bancada de Venda de @1", minetest.registered_items["default:desert_cobble"].description),
+	description = S("Bancada de Venda de @1", minetest.registered_items["default:coalblock"].description),
 	
 	-- Arte
 	tiles = {"shopping_bancada_pedra.png"},
@@ -84,19 +84,19 @@ minetest.register_node("shopping:bancada_desert_cobble", {
 	-- Chamadas de eventos
 	
 	on_rightclick = function(pos, node, player, itemstack, pointed_thing)
-		shopping.acesso(player, "default:desert_cobble")
+		shopping.acesso(player, "default:coalblock")
 	end,
 	
 	-- Coloca as pedras (decorativo)
 	on_construct = function(pos)
 		if minetest.get_node({x=pos.x, y=pos.y+1, z=pos.z}).name == "air" then
-			minetest.set_node({x=pos.x, y=pos.y+1, z=pos.z}, {name="shopping:bancada_desert_cobble_decor", param2=minetest.get_node(pos).param2})
+			minetest.set_node({x=pos.x, y=pos.y+1, z=pos.z}, {name="shopping:bancada_coal_decor", param2=minetest.get_node(pos).param2})
 		end 
 	end,
 	
 	-- Remove as pedras (decorativo)
 	on_destruct = function(pos)
-		if minetest.get_node({x=pos.x, y=pos.y+1, z=pos.z}).name == "shopping:bancada_desert_cobble_decor" then
+		if minetest.get_node({x=pos.x, y=pos.y+1, z=pos.z}).name == "shopping:bancada_coal_decor" then
 			minetest.remove_node({x=pos.x, y=pos.y+1, z=pos.z})
 		end 
 	end

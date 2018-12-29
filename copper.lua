@@ -1,26 +1,26 @@
 --[[
 	Mod Shopping para Minetest
-	Copyright (C) 2016 BrunoMine (https://github.com/BrunoMine)
+	Copyright (C) 2018 BrunoMine (https://github.com/BrunoMine)
 	
 	Recebeste uma cópia da GNU Lesser General
 	Public License junto com esse software,
 	se não, veja em <http://www.gnu.org/licenses/>. 
 	
-	Mostruario de venda de tree (arvore)
+	Mostruario de venda de copper
   ]]
 
 -- Tradutor de strings
 local S = shopping.S
 
 -- Node
-minetest.register_node("shopping:bancada_tree", {
+minetest.register_node("shopping:bancada_copper", {
 	-- Geral
-	description = S("Bancada de Venda de @1", minetest.registered_items["default:tree"].description),
+	description = S("Bancada de Venda de @1", minetest.registered_items["default:copper_ingot"].description),
 	
 	-- Arte
-	tiles = {"shopping_bancada_tree.png"},
+	tiles = {"shopping_bancada_copper.png"},
 	drawtype = "mesh",
-	mesh = "shopping_bancada_tree.obj",
+	mesh = "shopping_bancada_metal.obj",
 	collision_box = {
 		type = "fixed",
 		fixed = {
@@ -44,7 +44,7 @@ minetest.register_node("shopping:bancada_tree", {
 	-- Chamadas de eventos
 	
 	on_rightclick = function(pos, node, player, itemstack, pointed_thing)
-		shopping.acesso(player, "default:tree")
+		shopping.acesso(player, "default:copper_ingot")
 	end,
 	
 })
